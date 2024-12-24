@@ -21,7 +21,7 @@ import deepspeed
 from typing import Literal, Dict, Union
 from collections import defaultdict
 import math
-from transformers import SiglipTrainer
+from transformers import Trainer
 from loss import SigLipLoss
 
 
