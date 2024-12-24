@@ -17,7 +17,7 @@ from transformers import (
 from os.path import join
 from peft import LoraConfig, PeftModel, get_peft_model
 
-from trainer import get_trainer_class
+from trainer import SiglipTrainer
 
 # import bitsandbytes as bnb
 from datasets import Dataset
@@ -185,8 +185,7 @@ else:
 
 
 # Create trainer
-trainer_obj = get_trainer_class(trainer=getattr(config, "trainer", "siglip-trainer"))
-trainer = trainer_obj(
+trainer = SiglipTrainer(
     model=model,
     tokenizer=tokenizer,
     args=training_args,
