@@ -23,7 +23,6 @@ deepspeed: deepspeed_config.json
 lr_scheduler: cosine
 temperature: 1
 trainer: siglip-trainer
-model_name: fkbert
 emb_type: bos_token
 query_max_len: 64
 passage_max_len: 194
